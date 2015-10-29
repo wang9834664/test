@@ -1,0 +1,15 @@
+Development打包:
+
+xcodebuild -configuration Development -target XcodeConfigDemo CODE_SIGN_IDENTITY="iPhone Developer: Jun Xiao (6GRA39MUCX)"
+cd build/Development-iphoneos
+mkdir Payload
+mv *.app Payload
+zip -r -T -y ora.ipa Payload
+
+Production打包:
+
+xcodebuild -configuration Production -target XcodeConfigDemo CODE_SIGN_IDENTITY="iPhone Developer: Jun Xiao (6GRA39MUCX)"
+cd build/Production-iphoneos
+mkdir Payload
+mv *.app Payload
+zip -r -T -y ora.ipa Payload
